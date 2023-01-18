@@ -1,6 +1,5 @@
-// Write an application that can take in two Kenyan license
-
-'Kba 123A'
+// Write an application that can take in two Kenyan 
+// plates and tell you how many cars are between them.
 const carsBetween = (plate1, plate2) => {
     // convert the plates to uppercase
     plate1 = plate1.toUpperCase();
@@ -20,9 +19,9 @@ const carsBetween = (plate1, plate2) => {
     // difference between the last letter of the plate indicate 1000 cars
     let difference = Math.abs(plate2Letter.charCodeAt(0) - plate1Letter.charCodeAt(0));
     let carBtnLastLetter = difference * 1000;
-    let carBtnNumber = Math.abs(plate2Number - plate1Number) * 1000;
+    let carBtnNumber = Math.abs(plate2Number - plate1Number)
     
-    // get the last  letters of the first part of the plate
+    // get the last  letter of the first part of the plate
     let plate1CodeLastLetter = plate1Code.slice(-1);
     let plate2CodeLastLetter = plate2Code.slice(-1);
     // get the difference between the last 2 letters of the first part of the plate
@@ -44,4 +43,4 @@ const carsBetween = (plate1, plate2) => {
 
 }
 
-console.log(carsBetween('KaA 123A', 'Kba 123A'));
+console.log(carsBetween('KBA 200A', 'KAA 200A'));
